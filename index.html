@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anusha BA - Software Engineer & Data Science Student Portfolio. Explore projects, skills, timeline, and interactive AI chat." />
+  <meta name="keywords" content="Anusha BA, Software Engineer, Data Science, Python, Java, C, Portfolio, Web Developer" />
+  <meta name="author" content="Anusha BA" />
+  <title>Anusha BA | Software Engineer & Data Science Portfolio</title>
+
+  <!-- Google Fonts: Retro Pixel Heading Fonts & Modern Clean Body Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons for pixel/clean hybrid UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Portfolio Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ========================================================
+       SECTION 1: BASE STRUCTURE & ACCESSIBILITY SKIP LINK
+       Semantic layout: Header/Sidebar (<aside>), Main (<main>), Footer (<footer>)
+       ======================================================== -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Mobile Top Navigation Bar -->
+  <header class="mobile-header" aria-label="Mobile Navigation">
+    <div class="mobile-header-inner">
+      <a href="#hero" class="mobile-logo">
+        <span class="pixel-avatar-mini">👾</span>
+        <span class="logo-text">ANUSHA.DEV</span>
+      </a>
+      <div class="mobile-header-actions">
+        <!-- Night Mode Toggle (Mobile) -->
+        <button id="theme-toggle-mobile" class="theme-toggle-btn" aria-label="Toggle Night Mode" title="Toggle Night Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <!-- Mobile Hamburger Menu Button -->
+        <button id="mobile-menu-btn" class="menu-toggle-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+          <span class="pixel-bar"></span>
+          <span class="pixel-bar"></span>
+          <span class="pixel-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Container for Sidebar + Main Content -->
+  <div class="portfolio-container">
+
+    <!-- ========================================================
+         SECTION 3: VERTICAL NAVIGATION BAR (Left Side)
+         Semantic <aside> with <nav> containing links to all sections.
+         Accessible, keyboard-navigable, with pixel-art styling.
+         ======================================================== -->
+    <aside id="sidebar" class="vertical-navbar" aria-label="Primary Navigation">
+      <div class="navbar-brand">
+        <div class="brand-badge pixel-box">
+          <span class="pulse-dot"></span>
+          <span class="brand-code">&lt;DEV /&gt;</span>
+        </div>
+        <h1 class="brand-title">Anusha BA</h1>
+        <p class="brand-subtitle">Data Science &amp; Eng.</p>
+      </div>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-item active" data-section="hero">
+          <span class="nav-pixel-icon"><i class="fa-solid fa-house"></i></span>
+          <span class="nav-text">Home</span>
+          <span class="nav-indicator">►</span>
+        </a>
+        <a href="#about" class="nav-item" data-section="about">
+          <span class="nav-pixel-icon"><i class="fa-solid fa-user-astronaut"></i></span>
+          <span class="nav-text">About Me</span>
+          <span class="nav-indicator">►</span>
+        </a>
+        <a href="#skills" class="nav-item" data-section="skills">
+          <span class="nav-pixel-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+          <span class="nav-text">Skills</span>
+          <span class="nav-indicator">►</span>
+        </a>
+        <a href="#timeline" class="nav-item" data-section="timeline">
+          <span class="nav-pixel-icon"><i class="fa-solid fa-timeline"></i></span>
+          <span class="nav-text">Timeline</span>
+          <span class="nav-indicator">►</span>
+        </a>
+        <a href="#projects" class="nav-item" data-section="projects">
+          <span class="nav-pixel-icon"><i class="fa-solid fa-folder-tree"></i></span>
+          <span class="nav-text">Projects</span>
+          <span class="nav-indicator">►</span>
+        </a>
+        <a href="#video-intro" class="nav-item" data-section="video-intro">
+          <span class="nav-pixel-icon"><i class="fa-solid fa-circle-play"></i></span>
+          <span class="nav-text">Video Intro</span>
+          <span class="nav-indicator">►</span>
+        </a>
+        <a href="#testimonials" class="nav-item" data-section="testimonials">
+          <span class="nav-pixel-icon"><i class="fa-solid fa-comments"></i></span>
+          <span class="nav-text">Testimonials</span>
+          <span class="nav-indicator">►</span>
+        </a>
+        <a href="#chat" class="nav-item" data-section="chat">
+          <span class="nav-pixel-icon"><i class="fa-solid fa-robot"></i></span>
+          <span class="nav-text">AI Chat</span>
+          <span class="nav-indicator">►</span>
+        </a>
+        <a href="#contact" class="nav-item" data-section="contact">
+          <span class="nav-pixel-icon"><i class="fa-solid fa-paper-plane"></i></span>
+          <span class="nav-text">Contact</span>
+          <span class="nav-indicator">►</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar Controls: Sound FX Toggle & Theme Toggle -->
+      <div class="sidebar-footer">
+        <div class="pixel-controls">
+          <!-- Night Mode Toggle (Desktop) -->
+          <button id="theme-toggle" class="theme-toggle-btn pixel-btn-small" aria-label="Toggle Night Mode" title="Toggle Light/Dark Theme">
+            <i class="fa-solid fa-moon"></i>
+            <span class="toggle-label">DARK</span>
+          </button>
+          <!-- 8-Bit Retro Sound Effects Toggle -->
+          <button id="sound-toggle" class="sound-toggle-btn pixel-btn-small" aria-label="Toggle Retro Sound" title="Toggle 8-bit Beep Sounds">
+            <i class="fa-solid fa-volume-high"></i>
+            <span class="sound-label">SFX: ON</span>
+          </button>
+        </div>
+        <div class="status-pill">
+          <span class="online-indicator"></span>
+          <span>Status: Open to Internships</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Overlay backdrop for mobile navigation drawer -->
+    <div id="nav-overlay" class="nav-overlay"></div>
+
+    <!-- Main Content Stream -->
+    <main id="main-content" class="main-content">
+
+      <!-- ========================================================
+           SECTION 2: HERO SECTION WITH PIXEL ART & NIGHT MODE TOGGLE
+           Pixel art aesthetic, custom background image integration,
+           welcome title, dynamic typing tagline, and CTA buttons.
+           ======================================================== -->
+      <section id="hero" class="hero-section" aria-label="Hero Section">
+        <!-- Pixel scanline and vignette overlay -->
+        <div class="scanlines"></div>
+        <div class="hero-bg-overlay"></div>
+
+        <div class="hero-content">
+          <div class="hero-chip pixel-chip">
+            <span class="chip-sparkle">★</span> LEVEL 1 SOFTWARE ENGINEER &amp; DATA SCIENTIST <span class="chip-sparkle">★</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="greeting-prefix">Hello World, I'm</span>
+            <span class="hero-name glitch-effect" data-text="Anusha BA">Anusha BA</span>
+          </h1>
+
+          <p class="hero-tagline">
+            <span class="terminal-prompt">$</span>
+            <span id="typing-text" class="typing-text">Crafting Intelligent Solutions with Python, C &amp; Java</span>
+            <span class="cursor">_</span>
+          </p>
+
+          <p class="hero-description">
+            Passionate B.E. student in <strong>Data Science &amp; Engineering</strong> at Adichunchanagiri Institute of Technology. 
+            Blending computational logic, backend architecture, and data analytics to solve real-world problems.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="pixel-btn pixel-btn-primary">
+              <i class="fa-solid fa-gamepad"></i> Explore Projects
+            </a>
+            <a href="resume.pdf" download="Anusha_BA_Resume.pdf" class="pixel-btn pixel-btn-secondary" id="resume-download-btn">
+              <i class="fa-solid fa-file-arrow-down"></i> Resume PDF
+            </a>
+            <a href="#chat" class="pixel-btn pixel-btn-accent">
+              <i class="fa-solid fa-comment-dots"></i> Chat with AI Anusha
+            </a>
+          </div>
+
+          <div class="hero-quick-stats">
+            <div class="stat-card pixel-box">
+              <span class="stat-number">2025–29</span>
+              <span class="stat-label">B.E. Data Science</span>
+            </div>
+            <div class="stat-card pixel-box">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Core Languages</span>
+            </div>
+            <div class="stat-card pixel-box">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Passion &amp; Drive</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-scroll-indicator">
+          <a href="#about" aria-label="Scroll down to About section">
+            <span class="pixel-arrow">▼</span>
+            <span class="scroll-label">SCROLL DOWN</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 4: ABOUT ME SECTION WITH PROFILE & BIO
+           Profile image, short bio, career highlights, education,
+           and personal interests.
+           ======================================================== -->
+      <section id="about" class="section about-section" aria-label="About Me">
+        <div class="section-header">
+          <span class="section-tag">[ 01. IDENTITY ]</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Profile Card with Pixel Art Border -->
+          <div class="profile-card-wrapper">
+            <div class="pixel-frame profile-card">
+              <div class="pixel-corner top-left"></div>
+              <div class="pixel-corner top-right"></div>
+              <div class="pixel-corner bottom-left"></div>
+              <div class="pixel-corner bottom-right"></div>
+
+              <div class="profile-image-container">
+                <img src="profile.jpg" alt="Anusha BA - Professional Portrait" class="profile-img" />
+                <div class="badge-overlay pixel-badge">
+                  <i class="fa-solid fa-code"></i> ENGINEER
+                </div>
+              </div>
+
+              <div class="profile-quick-info">
+                <h3 class="profile-name">Anusha BA</h3>
+                <p class="profile-role">Data Science &amp; Engineering Undergraduate</p>
+                <div class="profile-location">
+                  <i class="fa-solid fa-location-dot"></i> Chikkamagaluru, Karnataka, India
+                </div>
+                <div class="profile-contact-chips">
+                  <a href="mailto:anushasanil061@gmail.com" class="chip-link" title="Email Anusha">
+                    <i class="fa-solid fa-envelope"></i> anushasanil061@gmail.com
+                  </a>
+                  <a href="tel:8094817628" class="chip-link" title="Call Anusha">
+                    <i class="fa-solid fa-phone"></i> +91 8094817628
+                  </a>
+                  <a href="https://www.linkedin.com/in/anusha-ba-237b46392" target="_blank" rel="noopener noreferrer" class="chip-link" title="LinkedIn Profile">
+                    <i class="fa-brands fa-linkedin"></i> anusha-ba-237b46392
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio & Highlights Content -->
+          <div class="bio-content-wrapper">
+            <div class="bio-card pixel-box">
+              <div class="bio-header">
+                <span class="pixel-icon">👋</span>
+                <h3 class="bio-heading">Aspiring Technologist &amp; Problem Solver</h3>
+              </div>
+              <p class="bio-text">
+                Hello! I am <strong>Anusha BA</strong>, an enthusiastic software engineer currently pursuing my 
+                <strong>Bachelor of Engineering in Data Science and Engineering (2025–2029)</strong> at 
+                <em>Adichunchanagiri Institute of Technology, Chikkamagaluru</em>.
+              </p>
+              <p class="bio-text">
+                My passion lies at the intersection of algorithmic thinking and data-driven systems. 
+                I have built strong foundational competencies in <strong>C, Python, and Java</strong>, applying these 
+                languages to academic software projects and analytical problem-solving.
+              </p>
+              <p class="bio-text">
+                I thrive on learning modern development patterns, exploring data engineering workflows, 
+                and continuously expanding my technical capacity through collaborative workshops, training, and building.
+              </p>
+
+              <!-- Career & Academic Highlights -->
+              <div class="highlights-grid">
+                <div class="highlight-item">
+                  <div class="highlight-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                  <div class="highlight-text">
+                    <h4>B.E. Data Science &amp; Eng.</h4>
+                    <p>Adichunchanagiri Inst. of Tech (AIT)</p>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon"><i class="fa-solid fa-award"></i></div>
+                  <div class="highlight-text">
+                    <h4>Technical Capacity Building</h4>
+                    <p>Completed industry technical training</p>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                  <div class="highlight-text">
+                    <h4>Hands-On Builder</h4>
+                    <p>Python, C, and Java project implementation</p>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon"><i class="fa-solid fa-seedling"></i></div>
+                  <div class="highlight-text">
+                    <h4>Personal Interests</h4>
+                    <p>Machine Learning, Open Source, UI Craft</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action button to view resume -->
+              <div class="bio-actions">
+                <a href="resume.pdf" target="_blank" class="pixel-btn pixel-btn-primary">
+                  <i class="fa-solid fa-eye"></i> View Full Resume
+                </a>
+                <a href="#contact" class="pixel-btn pixel-btn-outline">
+                  <i class="fa-solid fa-envelope-open-text"></i> Get In Touch
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 5: SKILLS SECTION
+           Highlights core competencies: Languages, Backend, Tools.
+           Progress bars styled as retro 8-bit HP/energy meters,
+           badges with hover effects, and explanatory code comments.
+           ======================================================== -->
+      <section id="skills" class="section skills-section" aria-label="Technical Skills">
+        <div class="section-header">
+          <span class="section-tag">[ 02. ABILITIES ]</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <p class="section-intro">
+          Core competencies and technical toolchains cultivated through coursework, 
+          hands-on coding challenges, and academic project development.
+        </p>
+
+        <!-- Category 1: Core Programming Languages -->
+        <div class="skills-category-group">
+          <h3 class="category-title">
+            <i class="fa-solid fa-code"></i> Programming Languages
+          </h3>
+          <div class="skills-grid">
+            <!-- Skill 1: Python -->
+            <!-- Represents Anusha's primary data science & automation language -->
+            <div class="skill-card pixel-box" data-skill="python">
+              <div class="skill-card-top">
+                <div class="skill-icon-wrap python-color">
+                  <i class="fa-brands fa-python"></i>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-title-row">
+                    <h4 class="skill-name">Python</h4>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                  <span class="skill-subtitle">Data Science, Scripting &amp; Algorithms</span>
+                </div>
+              </div>
+              <!-- 8-Bit Retro Progress Bar -->
+              <div class="pixel-progress-outer">
+                <div class="pixel-progress-inner" style="--skill-level: 85%;">
+                  <span class="progress-block"></span>
+                  <span class="progress-block"></span>
+                  <span class="progress-block"></span>
+                  <span class="progress-block"></span>
+                  <span class="progress-block"></span>
+                </div>
+              </div>
+              <p class="skill-desc">Applied in academic projects, data manipulation, algorithm design, and core programming.</p>
+            </div>
+
+            <!-- Skill 2: C Programming -->
+            <!-- Represents foundational systems programming, memory model & DSA -->
+            <div class="skill-card pixel-box" data-skill="c">
+              <div class="skill-card-top">
+                <div class="skill-icon-wrap c-color">
+                  <i class="fa-solid fa-c"></i>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-title-row">
+                    <h4 class="skill-name">C Language</h4>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                  <span class="skill-subtitle">Structured Programming &amp; Logic</span>
+                </div>
+              </div>
+              <div class="pixel-progress-outer">
+                <div class="pixel-progress-inner" style="--skill-level: 80%;">
+                  <span class="progress-block"></span>
+                  <span class="progress-block"></span>
+                  <span class="progress-block"></span>
+                  <span class="progress-block"></span>
+                </div>
+              </div>
+              <p class="skill-desc">Foundational algorithmic problem solving, pointers, memory concepts, and structured logic.</p>
+            </div>
+
+            <!-- Skill 3: Java & Backend -->
+            <!-- Represents object-oriented design and backend application logic -->
+            <div class="skill-card pixel-box" data-skill="java">
+              <div class="skill-card-top">
+                <div class="skill-icon-wrap java-color">
+                  <i class="fa-brands fa-java"></i>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-title-row">
+                    <h4 class="skill-name">Java (Backend)</h4>
+                    <span class="skill-percent">75%</span>
+                  </div>
+                  <span class="skill-subtitle">OOP Architecture &amp; Backend Foundations</span>
+                </div>
+              </div>
+              <div class="pixel-progress-outer">
+                <div class="pixel-progress-inner" style="--skill-level: 75%;">
+                  <span class="progress-block"></span>
+                  <span class="progress-block"></span>
+                  <span class="progress-block"></span>
+                  <span class="progress-block"></span>
+                </div>
+              </div>
+              <p class="skill-desc">Core Java, Object-Oriented Programming (OOP) paradigms, class hierarchies, and backend architecture.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Data Science & Engineering Competencies -->
+        <div class="skills-category-group">
+          <h3 class="category-title">
+            <i class="fa-solid fa-database"></i> Data Science &amp; Core Concepts
+          </h3>
+          <div class="badge-cloud">
+            <div class="pixel-badge-item">
+              <span class="badge-icon"><i class="fa-solid fa-chart-pie"></i></span>
+              <span class="badge-text">Data Science &amp; Analytics</span>
+            </div>
+            <div class="pixel-badge-item">
+              <span class="badge-icon"><i class="fa-solid fa-cubes"></i></span>
+              <span class="badge-text">Object-Oriented Programming</span>
+            </div>
+            <div class="pixel-badge-item">
+              <span class="badge-icon"><i class="fa-solid fa-brain"></i></span>
+              <span class="badge-text">Problem-Solving Logic</span>
+            </div>
+            <div class="pixel-badge-item">
+              <span class="badge-icon"><i class="fa-solid fa-network-wired"></i></span>
+              <span class="badge-text">Data Structures &amp; Algorithms</span>
+            </div>
+            <div class="pixel-badge-item">
+              <span class="badge-icon"><i class="fa-solid fa-table"></i></span>
+              <span class="badge-text">Database &amp; SQL Basics</span>
+            </div>
+            <div class="pixel-badge-item">
+              <span class="badge-icon"><i class="fa-solid fa-code-branch"></i></span>
+              <span class="badge-text">Git &amp; Version Control</span>
+            </div>
+            <div class="pixel-badge-item">
+              <span class="badge-icon"><i class="fa-solid fa-terminal"></i></span>
+              <span class="badge-text">VS Code &amp; Linux CLI</span>
+            </div>
+            <div class="pixel-badge-item">
+              <span class="badge-icon"><i class="fa-solid fa-palette"></i></span>
+              <span class="badge-text">Semantic HTML5 &amp; CSS3</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 6: INTERACTIVE TIMELINE OF CAREER MILESTONES
+           Milestones from Anusha's resume: Education, Training, Academic project.
+           Styled with rounded cards, pixel line, smooth hover transitions.
+           ======================================================== -->
+      <section id="timeline" class="section timeline-section" aria-label="Career and Education Milestones">
+        <div class="section-header">
+          <span class="section-tag">[ 03. QUEST LOG ]</span>
+          <h2 class="section-title">Milestones &amp; Journey</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Milestone 1: Current B.E. Degree -->
+          <div class="timeline-node" data-aos="fade-up">
+            <div class="timeline-badge pixel-box">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-card pixel-box">
+              <div class="timeline-header">
+                <span class="timeline-year">2025 – 2029 (Ongoing)</span>
+                <span class="timeline-status-badge current">CURRENT QUEST</span>
+              </div>
+              <h3 class="timeline-role">B.E. in Data Science and Engineering</h3>
+              <h4 class="timeline-org">Adichunchanagiri Institute of Technology, Chikkamagaluru</h4>
+              <p class="timeline-desc">
+                Enrolled in full-time Bachelor of Engineering program with focus on Data Science, 
+                Software Engineering principles, mathematical foundations, and high-level programming.
+              </p>
+              <div class="timeline-meta">
+                <span class="meta-tag"><i class="fa-solid fa-star"></i> CGPA: 6.05</span>
+                <span class="meta-tag"><i class="fa-solid fa-location-dot"></i> Chikkamagaluru</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 2: Technical Training & Capacity Building -->
+          <div class="timeline-node" data-aos="fade-up">
+            <div class="timeline-badge pixel-box">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div class="timeline-card pixel-box">
+              <div class="timeline-header">
+                <span class="timeline-year">2024 – 2026</span>
+                <span class="timeline-status-badge completed">ACHIEVEMENT</span>
+              </div>
+              <h3 class="timeline-role">Technical Training &amp; Capacity-Building</h3>
+              <h4 class="timeline-org">Professional Development Initiatives</h4>
+              <p class="timeline-desc">
+                Successfully completed specialized technical training modules and participated in 
+                career-development initiatives. Honed hands-on problem solving in Python, C, and Java.
+              </p>
+              <div class="timeline-meta">
+                <span class="meta-tag"><i class="fa-solid fa-code"></i> Python, C, Java</span>
+                <span class="meta-tag"><i class="fa-solid fa-award"></i> Career Development</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 3: Academic Project Execution -->
+          <div class="timeline-node" data-aos="fade-up">
+            <div class="timeline-badge pixel-box">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="timeline-card pixel-box">
+              <div class="timeline-header">
+                <span class="timeline-year">Academic Project</span>
+                <span class="timeline-status-badge project">ENGINEERING</span>
+              </div>
+              <h3 class="timeline-role">Multi-Language Academic Problem Solver</h3>
+              <h4 class="timeline-org">Adichunchanagiri Institute of Technology</h4>
+              <p class="timeline-desc">
+                Developed an engineering project applying programming fundamentals and algorithms. 
+                Integrated Python for computation, C for logic performance, and Java for OOP architecture.
+              </p>
+              <div class="timeline-meta">
+                <span class="meta-tag"><i class="fa-solid fa-check"></i> Applied Computing</span>
+                <span class="meta-tag"><i class="fa-solid fa-cubes"></i> Algorithm Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 4: Pre-University Education -->
+          <div class="timeline-node" data-aos="fade-up">
+            <div class="timeline-badge pixel-box">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="timeline-card pixel-box">
+              <div class="timeline-header">
+                <span class="timeline-year">2022 – 2024</span>
+                <span class="timeline-status-badge completed">COMPLETED</span>
+              </div>
+              <h3 class="timeline-role">Pre-University Course (Science)</h3>
+              <h4 class="timeline-org">BGS PU College, Balehonnuru, India</h4>
+              <p class="timeline-desc">
+                Completed higher secondary education with a rigorous focus on Science, Mathematics, 
+                and analytical reasoning, setting the foundation for engineering studies.
+              </p>
+              <div class="timeline-meta">
+                <span class="meta-tag"><i class="fa-solid fa-percent"></i> Score: 76%</span>
+                <span class="meta-tag"><i class="fa-solid fa-location-dot"></i> Balehonnuru</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 5: 10th Standard / Secondary School -->
+          <div class="timeline-node" data-aos="fade-up">
+            <div class="timeline-badge pixel-box">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <div class="timeline-card pixel-box">
+              <div class="timeline-header">
+                <span class="timeline-year">Completed</span>
+                <span class="timeline-status-badge completed">DISTINCTION</span>
+              </div>
+              <h3 class="timeline-role">10th Standard (SSLC)</h3>
+              <h4 class="timeline-org">Nirmala Convent School, Balehonnuru, India</h4>
+              <p class="timeline-desc">
+                Graduated with distinction, demonstrating consistent academic diligence, discipline, 
+                and active participation in school co-curricular activities.
+              </p>
+              <div class="timeline-meta">
+                <span class="meta-tag"><i class="fa-solid fa-star"></i> Score: 88% Distinction</span>
+                <span class="meta-tag"><i class="fa-solid fa-location-dot"></i> Balehonnuru</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 7: PROJECTS SECTION WITH CLICKABLE THUMBNAILS
+           Showcases projects with interactive modal popups for details.
+           Styled with consistent cards, tags, and pixel hover effects.
+           ======================================================== -->
+      <section id="projects" class="section projects-section" aria-label="Projects">
+        <div class="section-header">
+          <span class="section-tag">[ 04. INVENTORY ]</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <p class="section-intro">
+          Click on any project card to inspect technical architecture, features, and source details.
+        </p>
+
+        <div class="projects-grid">
+          <!-- Project 1: Academic Project (from resume) -->
+          <!-- Detailed connection: Represents the Python, C & Java implementation cited in Anusha's resume -->
+          <article class="project-card pixel-box" data-project-id="academic-project">
+            <div class="project-thumb">
+              <div class="thumb-pixel-art project-art-1">
+                <i class="fa-solid fa-cubes-stacked"></i>
+              </div>
+              <div class="thumb-tag">FEATURED</div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">C</span>
+                <span class="tag">Java</span>
+              </div>
+              <h3 class="project-title">Multi-Language Academic Engine</h3>
+              <p class="project-excerpt">
+                Comprehensive engineering project applying core algorithms and problem-solving logic 
+                using Python for computation, C for speed, and Java for modular structure.
+              </p>
+              <div class="project-card-footer">
+                <button class="pixel-btn-small view-project-btn" data-project="academic-project">
+                  <i class="fa-solid fa-up-right-from-square"></i> View Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Data Science Analytics & Visualizer -->
+          <!-- Detailed connection: Highlights Data Science engineering focus with Python & pandas -->
+          <article class="project-card pixel-box" data-project-id="data-science-viz">
+            <div class="project-thumb">
+              <div class="thumb-pixel-art project-art-2">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div class="thumb-tag">DATA SCIENCE</div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Visualization</span>
+              </div>
+              <h3 class="project-title">Data Science Insight Explorer</h3>
+              <p class="project-excerpt">
+                Exploratory data analysis suite built in Python that cleans raw datasets, 
+                computes statistical indicators, and produces clear visual insight charts.
+              </p>
+              <div class="project-card-footer">
+                <button class="pixel-btn-small view-project-btn" data-project="data-science-viz">
+                  <i class="fa-solid fa-up-right-from-square"></i> View Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Java Backend Management System -->
+          <!-- Detailed connection: Implements Anusha's backend Java OOP competencies -->
+          <article class="project-card pixel-box" data-project-id="java-backend">
+            <div class="project-thumb">
+              <div class="thumb-pixel-art project-art-3">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <div class="thumb-tag">BACKEND</div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Java</span>
+                <span class="tag">OOP</span>
+                <span class="tag">Data Structures</span>
+              </div>
+              <h3 class="project-title">Java Inventory &amp; Records Manager</h3>
+              <p class="project-excerpt">
+                Robust Java console &amp; file-backed system demonstrating encapsulation, 
+                polymorphism, custom data structures, and persistent record management.
+              </p>
+              <div class="project-card-footer">
+                <button class="pixel-btn-small view-project-btn" data-project="java-backend">
+                  <i class="fa-solid fa-up-right-from-square"></i> View Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Pixel Art Portfolio & AI Assistant -->
+          <!-- Detailed connection: The active, responsive interactive web portfolio built with Semantic HTML5, CSS3 & JS -->
+          <article class="project-card pixel-box" data-project-id="pixel-portfolio">
+            <div class="project-thumb">
+              <div class="thumb-pixel-art project-art-4">
+                <i class="fa-solid fa-gamepad"></i>
+              </div>
+              <div class="thumb-tag">FRONTEND &amp; AI</div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">HTML5 / CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">AI Chat</span>
+              </div>
+              <h3 class="project-title">Pixel Art Interactive Portfolio</h3>
+              <p class="project-excerpt">
+                Retro-styled, accessible developer portfolio featuring dark/light auto theme detection, 
+                video introduction player, AI interactive chat twin, and responsive design.
+              </p>
+              <div class="project-card-footer">
+                <button class="pixel-btn-small view-project-btn" data-project="pixel-portfolio">
+                  <i class="fa-solid fa-up-right-from-square"></i> View Details
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project Modal for Detailed View -->
+        <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+          <div class="modal-backdrop"></div>
+          <div class="modal-dialog pixel-box">
+            <div class="modal-header">
+              <h3 id="modal-title" class="modal-heading">Project Name</h3>
+              <button id="modal-close-btn" class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div id="modal-content" class="modal-content-area">
+                <!-- Dynamically populated by script.js -->
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="modal-dismiss" class="pixel-btn pixel-btn-secondary">Close</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 8: EMBEDDED VIDEO SECTION (SELF INTRODUCTION)
+           Features Anusha's actual self-introduction video with custom
+           pixel-art responsive player frame, plus YouTube embed fallback option.
+           ======================================================== -->
+      <section id="video-intro" class="section video-section" aria-label="Self Introduction Video">
+        <div class="section-header">
+          <span class="section-tag">[ 05. BROADCAST ]</span>
+          <h2 class="section-title">Video Introduction</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <p class="section-intro">
+          Watch Anusha BA's self-introduction video to learn about her technical journey, 
+          academic motivations in Data Science, and career aspirations.
+        </p>
+
+        <div class="video-container-wrapper">
+          <div class="video-retro-console pixel-box">
+            <!-- Console Header with Retro Controls -->
+            <div class="console-top-bar">
+              <div class="console-lights">
+                <span class="light red"></span>
+                <span class="light yellow"></span>
+                <span class="light green"></span>
+              </div>
+              <div class="console-title">
+                <i class="fa-solid fa-film"></i> ANUSHA_SELF_INTRO.MP4
+              </div>
+              <div class="console-tag">1080p HD</div>
+            </div>
+
+            <!-- Responsive Video Frame using CSS aspect-ratio container -->
+            <div class="video-frame-aspect">
+              <video id="intro-video-player" controls preload="metadata" poster="profile.jpg" class="responsive-video">
+                <source src="intro-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag. Please update your browser to watch the introduction.
+              </video>
+            </div>
+
+            <!-- Video Caption & Highlights -->
+            <div class="video-caption-box">
+              <div class="caption-icon">
+                <i class="fa-solid fa-circle-info"></i>
+              </div>
+              <div class="caption-text">
+                <h4>Video Overview: Self-Introduction &amp; Goals</h4>
+                <p>
+                  In this personal highlight video, Anusha BA shares her enthusiasm for Data Science, 
+                  her academic experience at Adichunchanagiri Institute of Technology, and her hands-on projects 
+                  in Python, C, and Java.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 9: TESTIMONIALS SECTION
+           Card-like containers with subtle drop shadow, pixelated borders,
+           clean readable quotes from professors, mentors, and peers.
+           ======================================================== -->
+      <section id="testimonials" class="section testimonials-section" aria-label="Testimonials">
+        <div class="section-header">
+          <span class="section-tag">[ 06. ENDORSEMENTS ]</span>
+          <h2 class="section-title">Peer &amp; Mentor Testimonials</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <p class="section-intro">
+          Feedback and observations from faculty, workshop instructors, and academic project peers.
+        </p>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card pixel-box">
+            <div class="quote-icon">“</div>
+            <p class="testimonial-quote">
+              Anusha demonstrates an extraordinary commitment to understanding foundational computer science concepts. 
+              Her problem-solving mindset in C and Python distinguishes her as an energetic and dedicated engineer.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar pixel-box">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <div class="author-details">
+                <h4 class="author-name">Academic Faculty Mentor</h4>
+                <p class="author-role">Adichunchanagiri Institute of Technology</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card pixel-box">
+            <div class="quote-icon">“</div>
+            <p class="testimonial-quote">
+              Working alongside Anusha during technical training was truly inspiring. 
+              She picks up new paradigms rapidly, stays calm under pressure, and always ensures code quality and teamwork.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar pixel-box">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div class="author-details">
+                <h4 class="author-name">Project Collaborator</h4>
+                <p class="author-role">Data Science Study Group</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card pixel-box">
+            <div class="quote-icon">“</div>
+            <p class="testimonial-quote">
+              Anusha combines analytical curiosity with real hands-on persistence. 
+              Her drive to build end-to-end software solutions in Java and Python makes her a promising talent for any engineering team.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar pixel-box">
+                <i class="fa-solid fa-chalkboard-user"></i>
+              </div>
+              <div class="author-details">
+                <h4 class="author-name">Workshop Coordinator</h4>
+                <p class="author-role">Technical Capacity-Building Initiative</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 10: AI CHAT INTERFACE INTEGRATION
+           Simulates an interactive conversation with "AI Anusha".
+           Input field, message log, preset chips, and comments for
+           OpenAI / Gemini API endpoint integration.
+           ======================================================== -->
+      <section id="chat" class="section chat-section" aria-label="Interactive AI Chat">
+        <div class="section-header">
+          <span class="section-tag">[ 07. NEURAL LINK ]</span>
+          <h2 class="section-title">Chat with AI Anusha</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <p class="section-intro">
+          Ask my AI virtual twin about my background, skills, college coursework, or contact info!
+        </p>
+
+        <div class="chat-wrapper pixel-box">
+          <!-- Chat Terminal Header -->
+          <div class="chat-header">
+            <div class="chat-header-status">
+              <span class="status-indicator-dot"></span>
+              <span class="bot-name">AI Anusha (v1.0)</span>
+            </div>
+            <div class="chat-badge pixel-chip">
+              ONLINE &bull; READY TO ASSIST
+            </div>
+          </div>
+
+          <!-- Quick Starter Prompt Chips -->
+          <div class="chat-suggestion-chips" aria-label="Suggested questions">
+            <button class="chat-chip" data-prompt="What programming languages do you know?">
+              💻 Programming Skills
+            </button>
+            <button class="chat-chip" data-prompt="Tell me about your education and college.">
+              🎓 Education &amp; College
+            </button>
+            <button class="chat-chip" data-prompt="What academic projects have you built?">
+              🚀 Projects Built
+            </button>
+            <button class="chat-chip" data-prompt="How can I get in touch with you?">
+              📬 Contact Details
+            </button>
+          </div>
+
+          <!-- Chat Messages Container -->
+          <div id="chat-messages" class="chat-messages" role="log" aria-live="polite">
+            <!-- Initial Greeting from AI -->
+            <div class="message-bubble bot-message">
+              <div class="bubble-avatar">👾</div>
+              <div class="bubble-content">
+                <p>Hello! I am <strong>AI Anusha</strong>, the digital virtual twin of Anusha BA. Ask me anything about her skills in Python, C, and Java, her B.E. in Data Science at AIT, or how to collaborate!</p>
+                <span class="message-time">Just now</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Input Area -->
+          <form id="chat-form" class="chat-input-bar">
+            <input 
+              type="text" 
+              id="chat-input" 
+              class="chat-text-input" 
+              placeholder="Ask AI Anusha a question... (e.g. 'What are your strengths?')" 
+              aria-label="Message to AI Anusha"
+              required 
+              autocomplete="off"
+            />
+            <button type="submit" id="chat-send-btn" class="pixel-btn pixel-btn-primary chat-send-btn">
+              <i class="fa-solid fa-paper-plane"></i> Send
+            </button>
+          </form>
+
+          <!-- Integration Hook Note -->
+          <div class="chat-note">
+            <small>
+              <i class="fa-solid fa-code"></i> Note: Equipped with simulated contextual reasoning. Ready for external OpenAI or Gemini API integration.
+            </small>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 11: CONTACT FORM WITH EMAIL API FUNCTIONALITY
+           Form fields: name, email, subject, message.
+           High-contrast pixel button, submission confirmation message,
+           and documented code comments for Resend / Formspree API hook.
+           ======================================================== -->
+      <section id="contact" class="section contact-section" aria-label="Contact Section">
+        <div class="section-header">
+          <span class="section-tag">[ 08. TRANSMISSION ]</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <p class="section-intro">
+          Have an internship opportunity, project collaboration, or question? Send me a direct message!
+        </p>
+
+        <div class="contact-grid">
+          <!-- Direct Contact Card -->
+          <div class="contact-info-card pixel-box">
+            <h3 class="contact-card-title">
+              <i class="fa-solid fa-address-card"></i> Contact Information
+            </h3>
+            <p class="contact-card-desc">
+              Feel free to reach out via phone, email, or LinkedIn. I usually respond within 24 hours.
+            </p>
+
+            <ul class="contact-list">
+              <li class="contact-list-item">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span class="contact-type">Email</span>
+                  <a href="mailto:anushasanil061@gmail.com" class="contact-link">anushasanil061@gmail.com</a>
+                </div>
+              </li>
+
+              <li class="contact-list-item">
+                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <span class="contact-type">Phone</span>
+                  <a href="tel:8094817628" class="contact-link">+91 8094817628</a>
+                </div>
+              </li>
+
+              <li class="contact-list-item">
+                <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+                <div>
+                  <span class="contact-type">LinkedIn</span>
+                  <a href="https://www.linkedin.com/in/anusha-ba-237b46392" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    linkedin.com/in/anusha-ba-237b46392
+                  </a>
+                </div>
+              </li>
+
+              <li class="contact-list-item">
+                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <span class="contact-type">Location</span>
+                  <span class="contact-link">Balehonnuru / Chikkamagaluru, India</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="resume-pill-box">
+              <a href="resume.pdf" download="Anusha_BA_Resume.pdf" class="pixel-btn pixel-btn-secondary full-width">
+                <i class="fa-solid fa-file-pdf"></i> Download Official Resume
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form with API Hook Comments -->
+          <div class="contact-form-card pixel-box">
+            <form id="contact-form" class="pixel-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">
+                  Your Name <span class="required-star">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="contact-name" 
+                  name="name" 
+                  class="pixel-input" 
+                  placeholder="e.g. Alex Morgan" 
+                  required 
+                />
+                <span class="field-error" id="name-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">
+                  Your Email <span class="required-star">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="contact-email" 
+                  name="email" 
+                  class="pixel-input" 
+                  placeholder="e.g. alex@example.com" 
+                  required 
+                />
+                <span class="field-error" id="email-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">
+                  Subject
+                </label>
+                <input 
+                  type="text" 
+                  id="contact-subject" 
+                  name="subject" 
+                  class="pixel-input" 
+                  placeholder="Internship opportunity / Project inquiry" 
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">
+                  Your Message <span class="required-star">*</span>
+                </label>
+                <textarea 
+                  id="contact-message" 
+                  name="message" 
+                  rows="5" 
+                  class="pixel-input" 
+                  placeholder="Hi Anusha, I reviewed your portfolio and would love to connect regarding..." 
+                  required
+                ></textarea>
+                <span class="field-error" id="message-error"></span>
+              </div>
+
+              <button type="submit" id="contact-submit-btn" class="pixel-btn pixel-btn-primary form-submit-btn">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+
+              <!-- Dynamic submission feedback container -->
+              <div id="contact-feedback" class="form-feedback pixel-box" style="display: none;" role="status">
+                <!-- Populated via script.js -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 12: SOCIAL MEDIA LINKS IN THE FOOTER
+           Accessible social links, pixel art styling, copyright,
+           and back-to-top pixel button.
+           ======================================================== -->
+      <footer class="portfolio-footer" aria-label="Footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <h3 class="footer-logo">&lt;ANUSHA BA /&gt;</h3>
+            <p class="footer-tagline">Data Science &amp; Software Engineering Undergraduate</p>
+          </div>
+
+          <div class="footer-social-links" aria-label="Social media profiles">
+            <a href="https://www.linkedin.com/in/anusha-ba-237b46392" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Anusha's LinkedIn Profile" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:anushasanil061@gmail.com" class="social-icon-btn" aria-label="Send email to Anusha" title="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="tel:8094817628" class="social-icon-btn" aria-label="Call Anusha" title="Phone">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+
+          <div class="footer-bottom">
+            <p class="copyright-text">
+              &copy; <span id="current-year"></span> Anusha BA. Handcrafted with Pixel Art Aesthetics &amp; Clean Code.
+            </p>
+            <a href="#hero" class="pixel-back-to-top" aria-label="Back to top">
+              ▲ TOP
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Portfolio Logic & Interactive Features -->
+  <script src="script.js"></script>
+</body>
+</html>
